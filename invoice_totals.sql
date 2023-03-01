@@ -1,6 +1,7 @@
 SELECT 
     i.Total,
     c.FirstName || ' ' || c.LastName AS Customer_Name,
+    c.Country,
     e.FirstName || ' ' || e.LastName AS Sales_Agent_Name
 FROM Invoice i 
 JOIN Customer c ON i.CustomerId = c.CustomerId
