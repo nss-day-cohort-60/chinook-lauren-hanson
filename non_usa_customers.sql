@@ -1,6 +1,9 @@
 SELECT 
     c.FirstName, 
     c.LastName, 
-    c.Country
+    i.InvoiceId, 
+    i.InvoiceDate,
+    i.BillingCountry
 FROM Customer c
-WHERE Country NOT LIKE "USA"
+    INNER JOIN Invoice i ON c.CustomerId = i.CustomerId
+WHERE Country LIKE "Brazil"
