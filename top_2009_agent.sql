@@ -1,4 +1,5 @@
-SELECT EmployeeName AS EmployeeName,
+SELECT 
+    EmployeeName AS EmployeeName,
     MAX(TotalSales2009) AS TopTotalSales2009
 FROM (
         SELECT SUM(
